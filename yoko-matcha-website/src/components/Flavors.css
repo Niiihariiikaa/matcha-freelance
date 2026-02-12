@@ -1,0 +1,147 @@
+/* ================= SECTION ================= */
+
+.flavors-section {
+ background:
+  /* STRIPES — only bottom 30% */
+  repeating-linear-gradient(
+    90deg,
+    rgba(232, 207, 199, 0.25) 0px,
+    rgba(232, 207, 199, 0.25) 35px,
+    rgba(225, 194, 184, 0.25) 35px,
+    rgba(225, 194, 184, 0.25) 70px
+  ) bottom / 100% 30% no-repeat,
+  
+  /* GREEN + PINK SPLIT */
+  
+  /* BASE GREEN + PINK SPLIT */
+  linear-gradient(to bottom, #2E3F1F 70%, #DCC7B2 70%);
+  padding: 120px 160px 220px 160px; /* side breathing space */
+  overflow: hidden; /* prevents side scroll */
+  position: relative;
+  text-align: center;
+  
+}
+
+.flavors-title {
+  font-size: 60px;
+  color: #E8F2C8;
+  margin-bottom: 0px;
+  font-family: 'Paytone One', sans-serif;
+}
+
+/* ================= LAYOUT ================= */
+
+.flavors-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0px; /* space between cards */
+  max-width: 1800px;
+  margin: 0 auto;
+  
+}
+
+/* ================= CARD ================= */
+
+.flavor-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: -210px; 
+  margin-right: -220px; /* pulls cards closer */
+  z-index:1;
+}
+
+/* Slight lift for middle card */
+.flavor-card:nth-child(2) {
+  transform: translateY(-30px);
+  z-index: 5;
+}
+.flavor-card:nth-child(3) {
+  transform: translateX(-60px);
+}
+
+/* ================= CIRCLE ================= */
+
+.flavor-circle {
+  width: 480px;
+  height: 480px;
+  background-color: #7FA047;
+  border-radius: 50%;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  padding: 160px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flavor-circle h3 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.flavor-circle p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= IMAGE BASE ================= */
+
+.flavor-image {
+  position: relative;
+  z-index: 10;
+  filter: drop-shadow(0 50px 80px rgba(0, 0, 0, 0.55));
+  
+}
+
+/* ================= YOUR LARGE IMAGE SIZES (UNCHANGED) ================= */
+
+.ginger-img {
+  width: 720px;
+  margin-bottom: -170px;
+  max-width: 100%;
+}
+
+.vanilla-img {
+  width: 920px;
+  margin-bottom: -190px;
+  max-width: 100%;
+}
+
+.seasalt-img {
+  width: 800px;
+  margin-bottom: -175px;
+  max-width: 100%;
+   /* pulls it closer */
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1500px) {
+  .flavors-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 160px;
+  }
+
+  .flavor-card:nth-child(2) {
+    transform: none;
+  }
+
+  .flavor-circle {
+    width: 420px;
+    height: 420px;
+    padding-top: 140px;
+  }
+
+  .ginger-img,
+  .vanilla-img,
+  .seasalt-img {
+    width: 500px;
+  }
+}
