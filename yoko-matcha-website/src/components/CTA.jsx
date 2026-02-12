@@ -29,7 +29,7 @@ function CTA() {
         <div className="flex justify-center items-center gap-3 mb-6">
           <span className="text-3xl font-paytone text-[#4A5D3F]">yoko</span>
         </div>
-        <p className="mb-4 text-sm">© 2024 Yokō Matcha. Premium instant matcha for modern life.</p>
+        <p className="mb-4 text-sm">© 2026 Yokō Matcha. Premium instant matcha for modern life.</p>
         <div className="flex justify-center gap-8 text-sm">
           <a href="#" className="hover:text-[#6B8E4E] transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-[#6B8E4E] transition-colors">Terms of Service</a>
