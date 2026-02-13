@@ -36,7 +36,7 @@ function FAQ() {
   ];
 
   return (
-    <section className="bg-[repeating-linear-gradient(90deg,rgba(232,207,199,0.25)_0px,rgba(232,207,199,0.25)_35px,rgba(225,194,184,0.25)_35px,rgba(225,194,184,0.25)_70px)] pointer-events-none py-20 px-8">
+    <section className="bg-[repeating-linear-gradient(90deg,rgba(232,207,199,0.25)_0px,rgba(232,207,199,0.25)_35px,rgba(225,194,184,0.25)_35px,rgba(225,194,184,0.25)_70px)] py-20 px-8">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-5xl lg:text-6xl font-paytone text-[#2E7D32] text-center mb-16">
           Frequently Asked Questions

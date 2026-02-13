@@ -1,44 +1,38 @@
 /* ================= SECTION ================= */
 
 .flavors-section {
- background:
-  /* STRIPES — only bottom 30% */
-  repeating-linear-gradient(
-    90deg,
-    rgba(232, 207, 199, 0.25) 0px,
-    rgba(232, 207, 199, 0.25) 35px,
-    rgba(225, 194, 184, 0.25) 35px,
-    rgba(225, 194, 184, 0.25) 70px
-  ) bottom / 100% 30% no-repeat,
-  
-  /* GREEN + PINK SPLIT */
-  
-  /* BASE GREEN + PINK SPLIT */
-  linear-gradient(to bottom, #2E3F1F 70%, #DCC7B2 70%);
-  padding: 120px 160px 220px 160px; /* side breathing space */
-  overflow: hidden; /* prevents side scroll */
-  position: relative;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(232, 207, 199, 0.25) 0px,
+      rgba(232, 207, 199, 0.25) 35px,
+      rgba(225, 194, 184, 0.25) 35px,
+      rgba(225, 194, 184, 0.25) 70px
+    ) bottom / 100% 30% no-repeat,
+    linear-gradient(to bottom, #2E3F1F 70%, #DCC7B2 70%);
+
+  padding: 120px 5vw 220px;
   text-align: center;
-  
+  overflow: hidden;
 }
 
+/* ================= TITLE ================= */
+
 .flavors-title {
-  font-size: 60px;
+  font-size: clamp(36px, 5vw, 60px);
   color: #E8F2C8;
-  margin-bottom: 0px;
+  margin-bottom: 60px;
   font-family: 'Paytone One', sans-serif;
 }
 
-/* ================= LAYOUT ================= */
+/* ================= GRID ================= */
 
 .flavors-grid {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 0px; /* space between cards */
-  max-width: 1800px;
-  margin: 0 auto;
-  
+  gap: 0;
+  flex-wrap: wrap;
 }
 
 /* ================= CARD ================= */
@@ -48,100 +42,84 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0;
-  margin-left: -210px; 
-  margin-right: -220px; /* pulls cards closer */
-  z-index:1;
+  margin: 0 -6vw; /* responsive overlap */
+  z-index: 1;
 }
 
-/* Slight lift for middle card */
+/* Center card lifted */
 .flavor-card:nth-child(2) {
-  transform: translateY(-30px);
+  transform: translateY(-3vw);
   z-index: 5;
-}
-.flavor-card:nth-child(3) {
-  transform: translateX(-60px);
 }
 
 /* ================= CIRCLE ================= */
 
 .flavor-circle {
-  width: 480px;
-  height: 480px;
+  width: clamp(280px, 32vw, 480px);
+  height: clamp(280px, 32vw, 480px);
   background-color: #7FA047;
   border-radius: 50%;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-  padding: 160px 50px 50px;
+  padding: clamp(80px, 10vw, 160px) 40px 40px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translateY(-50px);
 }
 
 .flavor-circle h3 {
   color: white;
-  font-size: 30px;
-  margin-bottom: 15px;
+  font-size: clamp(18px, 2vw, 30px);
+  margin-bottom: 12px;
   font-family: 'Paytone One', sans-serif;
 }
 
 .flavor-circle p {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 18px;
+  font-size: clamp(14px, 1.2vw, 18px);
   font-family: 'Poppins', sans-serif;
 }
+
+/* ================= IMAGES ================= */
 
 /* ================= IMAGE BASE ================= */
 
 .flavor-image {
-  position: relative;
+  width: clamp(260px, 38vw, 850px);
+  margin-bottom: clamp(-80px, -9vw, -180px);
   z-index: 10;
-  filter: drop-shadow(0 50px 80px rgba(0, 0, 0, 0.55));
-  
+  filter: drop-shadow(0 50px 80px rgba(0, 0, 0, 0.5));
 }
 
-/* ================= YOUR LARGE IMAGE SIZES (UNCHANGED) ================= */
+/* Manual balancing per pouch */
 
 .ginger-img {
-  width: 720px;
-  margin-bottom: -170px;
-  max-width: 100%;
+  transform: scale(1.20);
 }
 
 .vanilla-img {
-  width: 920px;
-  margin-bottom: -190px;
-  max-width: 100%;
+  transform: scale(1.45);
 }
 
 .seasalt-img {
-  width: 800px;
-  margin-bottom: -175px;
-  max-width: 100%;
-   /* pulls it closer */
+  transform: scale(1.25) translateY(-15px);
+  
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE STACK ================= */
 
-@media (max-width: 1500px) {
+@media (max-width: 768px) {
   .flavors-grid {
     flex-direction: column;
-    align-items: center;
-    gap: 160px;
+    gap: 120px;
+  }
+
+  .flavor-card {
+    margin: 0;
   }
 
   .flavor-card:nth-child(2) {
     transform: none;
-  }
-
-  .flavor-circle {
-    width: 420px;
-    height: 420px;
-    padding-top: 140px;
-  }
-
-  .ginger-img,
-  .vanilla-img,
-  .seasalt-img {
-    width: 500px;
   }
 }

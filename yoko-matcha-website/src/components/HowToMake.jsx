@@ -32,8 +32,9 @@ const HowToMake = () => {
         />
 
         <div className="howto-card">
-          <h2>Try our latest</h2>
+          
           <h3>Classic oat matcha</h3>
+          <h2>what's inside </h2>
           <ul>
             <li>Premium matcha powder</li>
             <li>Oat milk base</li>

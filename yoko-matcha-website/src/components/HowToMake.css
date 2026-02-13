@@ -15,41 +15,60 @@
   display: flex;
   gap: 0rem;
   width: 100%;
+  
 }
 
 .howto-img {
   width: 50%;
-  height: 360px;
+  height: 560px;
   object-fit: cover;
   
 }
 
 /* ---------- FLOATING CARD ---------- */
+/* ---------- FLOATING CARD ---------- */
+
+/* ---------- FLOATING CARD ---------- */
+
 .howto-card {
   position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -35%;          /* anchor high but inside container */
+  left: 12%;
+  transform: translateY(-50%);
 
-  width: 520px;
-  height: 420px; /* stays same size */
-  background: rgba(255, 255, 255, 0.433); /* low opacity */
-  backdrop-filter: blur(8px);
-  color: black;
+  width: 680px;      /* bigger width */
+  padding: 4rem; 
+  height: 720px;    /* more breathing space */
 
-  padding: 1.5rem 2rem;
-  border-radius: 22px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
-  text-align: center;
+  background: rgba(241, 236, 189, 0.703);  /* reduced opacity */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(2px);
+
+  border-radius: 72px;
+  box-shadow: 
+  0 20px 760px rgba(0, 0, 0, 0.18),
+  0 10px 425px rgba(0, 0, 0, 0.12);
+  text-align: left;
 }
 
 .howto-card h3 {
   margin-bottom: 1rem;
-  font-family: paytone one, sans-serif; font-size: 28px;
+  font-family: paytone one, sans-serif; font-size: 88px;
+  color: #5f8807;
+  margin-left: 20px;
+}
+.howto-card h2 {
+  
+  font-family: poppins, sans-serif; font-size: 30px;
+  margin-bottom: 10px;
+  color: #293b029a;
 }
 
 .howto-card ul {
   padding-left: 1rem;
+  font-size: 30px;
+  color: #293b029a;
+  margin-left: 20px;
 }
 
 .howto-card li {
@@ -62,7 +81,7 @@
   grid-template-columns: 1fr 1fr;
   margin-top: 4rem;
   min-height: 420px;
-  background-color: rgb(107, 149, 2);
+  background-color: #5f8807;
 }
 
 .menu-bg img {
