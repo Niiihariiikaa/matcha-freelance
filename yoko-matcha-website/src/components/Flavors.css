@@ -95,15 +95,15 @@
 /* Manual balancing per pouch */
 
 .ginger-img {
-  transform: scale(1.20);
+  transform: scale(1.28) translateX(-20px);
 }
 
 .vanilla-img {
-  transform: scale(1.45);
+  transform: scale(1.55)  translateX(-10px);
 }
 
 .seasalt-img {
-  transform: scale(1.25) translateY(-15px);
+  transform: scale(1.25) translateY(-15px) translateX(23px);
   
 }
 
